@@ -1,0 +1,12 @@
+.kazaAnketa {
+  width: 90%;
+  color: black;
+  max-width: 500px;
+  margin: auto;
+  padding: 100px 20px;
+}
+
+.btn-anketa {
+  width: 80%;
+  margin: 20px 0;
+}

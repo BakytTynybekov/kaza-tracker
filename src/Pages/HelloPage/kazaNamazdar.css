@@ -1,0 +1,25 @@
+.helloPage {
+  padding-top: 100px;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.kaza-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  margin: 20px 0;
+  button {
+    padding: 0;
+    font-size: 20px;
+  }
+}
+
+.kaza-quantity {
+  display: flex;
+  gap: 20px;
+}
