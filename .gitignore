@@ -6,6 +6,15 @@
 .pnp.js
 /dataconnect
 /dataconnect-generated
+
+
+.firebaserc
+.gitignore
+firebase.json
+package-lock.json
+package.json
+y/404.html
+y/index.html
 # testing
 /coverage
 
