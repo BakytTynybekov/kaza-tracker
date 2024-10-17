@@ -11,15 +11,47 @@ h2 {
 .kaza-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 22px;
   margin: 20px 0;
+  padding: 3px 0 7px 0;
+
   button {
     padding: 0;
     font-size: 20px;
+    z-index: 1 !important;
   }
 }
 
 .kaza-quantity {
   display: flex;
   gap: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .helloPage {
+    padding: 100px 10px;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .kaza-quantity {
+    gap: 5px;
+  }
+  .kaza-item {
+    font-size: 18px;
+    border-bottom: 1px solid black;
+
+    input {
+      font-size: 14px !important;
+      text-align: center;
+      padding: 10px 5px;
+    }
+  }
+
+  .anketa-btn {
+    font-size: 14px !important;
+    padding: 10px;
+  }
 }

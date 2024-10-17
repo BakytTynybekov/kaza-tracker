@@ -42,7 +42,7 @@ export default function Home() {
           <div className="home__inner">
             {!user && (
               <main className="main">
-                <h1>Ассаламу Алейкум</h1>
+                <h1>Ассаламу Алейкум!</h1>
                 <p>
                   <Typewriter
                     options={{

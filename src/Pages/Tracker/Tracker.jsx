@@ -127,6 +127,7 @@ function Tracker() {
                       onClick={() => handleSubmit(data)}
                       fullWidth
                       variant="outlined"
+                      size="small"
                     >
                       Сактоо
                     </Button>
@@ -149,8 +150,8 @@ function Tracker() {
                       <div key={i} className="kaza-block">
                         <h3>{namaz}</h3>
                         <Gauge
-                          width={120}
-                          height={130}
+                          width={110}
+                          height={110}
                           value={data ? data[namaz]?.done : 100}
                           valueMax={data ? data[namaz]?.all : 100}
                           text={({ value, valueMax }) =>
@@ -158,6 +159,7 @@ function Tracker() {
                           }
                         />
                         <Button
+                          className="track-btn"
                           sx={{ borderRadius: "20px" }}
                           onClick={() =>
                             handleClickOpen(

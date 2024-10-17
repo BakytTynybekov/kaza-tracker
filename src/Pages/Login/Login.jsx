@@ -38,7 +38,7 @@ function Login() {
       <div className="login">
         <div className="container">
           <div className="login__inner">
-            <h1>Авторизация</h1>
+            <h1>Кируу</h1>
             <form action="" className="form">
               <input
                 value={logInfo.email}
@@ -57,13 +57,13 @@ function Login() {
                 placeholder="Пароль"
               />
               <button onClick={(e) => handleSubmit(e)}>Войти</button>
-              <p className="newAkk">
-                Аккаунтунуз жокбу? Анда -{" "}
-                <Link to={"/signup"} className="newAkk-link">
-                  Sign up
-                </Link>
-              </p>
             </form>
+            <p className="newAkk">
+              Аккаунтунуз жокбу? Анда -{" "}
+              <Link to={"/signup"} className="newAkk-link">
+                Sign up
+              </Link>
+            </p>
           </div>
         </div>
       </div>

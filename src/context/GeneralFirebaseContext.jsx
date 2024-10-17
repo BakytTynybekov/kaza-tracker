@@ -4,17 +4,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import {
-  addDoc,
-  collection,
-  deleteDoc,
-  doc,
-  getDoc,
-  getDocs,
-  getFirestore,
-  setDoc,
-  updateDoc,
-} from "firebase/firestore";
+import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 
 import { createContext, useState } from "react";
 import * as firebaseApp from "../firebase/firebase";
@@ -24,7 +14,6 @@ export const GeneralFirebaseContext = createContext();
 export const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(null);
-  const [status, setStatus] = useState(false);
 
   const loginWithEmail = async (email, password) => {
     try {
@@ -79,7 +68,6 @@ export const FirebaseProvider = ({ children }) => {
     if (data.exists()) {
       console.log(data.data());
       setUserData(data.data());
-      setStatus(true);
     }
   };
 

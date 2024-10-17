@@ -1,6 +1,4 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import PersonAdd from "@mui/icons-material/PersonAdd";
+import React, { useContext } from "react";
 
 import "./header.css";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +17,6 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-  Typography,
 } from "@mui/material";
 import { Delete, Logout, Settings } from "@mui/icons-material";
 import { GeneralFirebaseContext } from "../../context/GeneralFirebaseContext";
@@ -104,6 +101,7 @@ export default function Header() {
               </Tooltip>
             </Box>
             <Menu
+              className="header-dialog"
               anchorEl={anchorEl}
               id="account-menu"
               open={open}

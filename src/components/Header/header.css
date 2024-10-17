@@ -1,6 +1,7 @@
 header {
   position: fixed;
   width: 100%;
+  background-color: black;
 }
 
 .header__inner {
@@ -14,6 +15,8 @@ header {
   font-weight: bold;
   font-size: 26px;
   font-family: "Times New Roman";
+  color: white;
+  z-index: 1000;
   text-align: center;
   cursor: pointer;
   -webkit-user-select: none; /* Chrome/Safari */
@@ -24,4 +27,13 @@ header {
 
 .kaza-logo:active {
   transform: scale(1.02);
+}
+
+@media screen and (max-width: 400px) {
+  .header-dialog {
+    li {
+      font-size: 13px !important;
+      padding: 5px;
+    }
+  }
 }

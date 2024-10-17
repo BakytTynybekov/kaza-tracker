@@ -3,7 +3,6 @@ import "./kazaNamazdar.css";
 import { Button, TextField } from "@mui/material";
 import { GeneralFirebaseContext } from "../../context/GeneralFirebaseContext";
 import { useNavigate } from "react-router-dom";
-import { GeneralContext } from "../../context/generalContext";
 
 export default function KazaNamazdar() {
   const namazdar = [
@@ -72,14 +71,11 @@ export default function KazaNamazdar() {
         <div key={i} className="kaza-item">
           <div className="kaza-name">{namaz}</div>
           <div className="kaza-quantity">
-            <Button
-              onClick={() => handleChange("minus", namaz)}
-              variant={"outlined"}
-              size="small"
-            >
+            <Button onClick={() => handleChange("minus", namaz)} size="small">
               -
             </Button>
             <TextField
+              className="input"
               id="outlined-basic"
               variant="outlined"
               value={data ? data[namaz].all : 0}
@@ -91,15 +87,11 @@ export default function KazaNamazdar() {
               }
               size="small"
               style={{
-                width: 100,
+                width: 80,
               }}
             />
 
-            <Button
-              onClick={() => handleChange("plus", namaz)}
-              variant={"outlined"}
-              size="small"
-            >
+            <Button onClick={() => handleChange("plus", namaz)} size="small">
               +
             </Button>
           </div>
@@ -112,6 +104,7 @@ export default function KazaNamazdar() {
         size="large"
         variant="contained"
         fullWidth
+        className="anketa-btn"
       >
         Сактоо
       </Button>
