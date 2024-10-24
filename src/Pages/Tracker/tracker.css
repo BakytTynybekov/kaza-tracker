@@ -27,7 +27,7 @@
   display: grid;
   justify-content: center;
   width: 150px;
-  margin: 10px;
+  margin: 10px 10px 50px;
   padding: 20px 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -163,6 +163,7 @@
   .kaza-block {
     width: 130px;
     margin: 10px;
+    margin-bottom: 80px !important;
     padding: 20px 10px;
     border-radius: 10px;
     background-color: #fff;
