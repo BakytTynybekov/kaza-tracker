@@ -19,6 +19,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import { Delete, Logout, Settings } from "@mui/icons-material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { GeneralFirebaseContext } from "../../context/GeneralFirebaseContext";
 
 export default function Header() {
@@ -31,7 +32,6 @@ export default function Header() {
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
-    console.log(user);
   };
 
   const handleClear = () => {
@@ -50,7 +50,7 @@ export default function Header() {
       logOut();
     } else if (type === "clear") {
       setOpenDia(true);
-    } else {
+    } else if (type === "kaza") {
       navigate("/kazaNamazdar");
     }
     setAnchorEl(null);
@@ -67,9 +67,11 @@ export default function Header() {
             <Button
               onClick={() => navigate("/login")}
               style={{
-                borderRadius: 35,
+                borderRadius: 13,
+                padding: 2,
+                margin: "0px 20px",
               }}
-              variant="contained"
+              variant="outlined"
             >
               Кируу
             </Button>
@@ -97,6 +99,7 @@ export default function Header() {
                   <Avatar sx={{ width: 32, height: 32 }}>
                     {user.email ? user.email[0].toUpperCase() : ""}
                   </Avatar>
+                  <KeyboardArrowDownIcon />
                 </IconButton>
               </Tooltip>
             </Box>
@@ -137,7 +140,7 @@ export default function Header() {
               transformOrigin={{ horizontal: "right", vertical: "top" }}
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-              <MenuItem>{user?.name}</MenuItem>
+              <MenuItem>{user?.email}</MenuItem>
 
               <Divider />
 

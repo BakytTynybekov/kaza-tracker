@@ -1,6 +1,6 @@
 .main-kaza {
   margin: auto;
-  padding: 80px 5px;
+  padding: 100px 5px;
   width: 90%;
   text-align: center;
 }
@@ -17,10 +17,11 @@
 
 .kazalar {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  align-items: start;
   margin: auto;
+  overflow: auto;
 }
 .kaza-block {
   display: grid;
@@ -135,6 +136,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .kaza-dialog__title {
+    font-size: 14px !important;
+  }
   .kaza-dialog__change {
     h4 {
       font-size: 13px;
@@ -145,7 +149,7 @@
     }
   }
   .main-kaza {
-    padding: 120px 0;
+    padding: 100px 0;
     h2 {
       font-size: 20px;
     }

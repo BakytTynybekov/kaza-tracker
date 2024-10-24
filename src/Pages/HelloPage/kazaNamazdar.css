@@ -1,7 +1,7 @@
 .helloPage {
-  padding-top: 100px;
+  padding-top: 60px;
   max-width: 500px;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   font-size: 22px;
-  margin: 20px 0;
+  margin: 5px 0;
   padding: 3px 0 7px 0;
 
   button {
@@ -25,7 +25,7 @@ h2 {
 
 .kaza-quantity {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 @media screen and (max-width: 400px) {

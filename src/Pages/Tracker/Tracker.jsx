@@ -61,7 +61,11 @@ function Tracker() {
     if (type === "plus") {
       setData({
         ...data,
-        [namaz]: { ...data[namaz], all: +data[namaz].all - 1 },
+        [namaz]: {
+          ...data[namaz],
+          all: +data[namaz].all - 1,
+          done: +data[namaz].done + 1,
+        },
         done: data.done + 1,
         all: data.all - 1,
       });
