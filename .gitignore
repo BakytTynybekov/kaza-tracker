@@ -6,6 +6,7 @@
 .pnp.js
 /dataconnect
 /dataconnect-generated
+.env
 
 
 .firebaserc

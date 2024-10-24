@@ -11,6 +11,8 @@ import loadingImg from "./images/loading.svg";
 import Tracker from "./Pages/Tracker/Tracker";
 
 function App() {
+  console.log(process.env.REACT_APP_API_KEY);
+
   return (
     <div className="App">
       <Header />

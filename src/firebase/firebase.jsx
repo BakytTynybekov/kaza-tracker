@@ -8,7 +8,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC6PQAMmQHEN_ySpjXn25uucqQk8uSO6HQ",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "kaza-namaz-a1700.firebaseapp.com",
   projectId: "kaza-namaz-a1700",
   storageBucket: "kaza-namaz-a1700.appspot.com",
