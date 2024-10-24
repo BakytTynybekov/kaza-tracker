@@ -59,9 +59,9 @@ function Login() {
               <button onClick={(e) => handleSubmit(e)}>Войти</button>
             </form>
             <p className="newAkk">
-              Аккаунтунуз жокбу? Анда -{" "}
+              Аккаунтунуз жокбу?{" "}
               <Link to={"/signup"} className="newAkk-link">
-                Sign up
+                Аккаунт Ачуу
               </Link>
             </p>
           </div>

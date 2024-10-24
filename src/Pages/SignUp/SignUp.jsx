@@ -8,6 +8,7 @@ export default function SignUp() {
   const [logInfo, setLogInfo] = useState({
     email: "",
     password: "",
+    name: "",
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,8 +26,16 @@ export default function SignUp() {
       <div className="login">
         <div className="container">
           <div className="login__inner">
-            <h1>Регистрация</h1>
+            <h1>Жаны аккаунт ачуу</h1>
             <form action="" className="form">
+              <input
+                value={logInfo.email}
+                onChange={(e) =>
+                  setLogInfo({ ...logInfo, name: e.target.value })
+                }
+                type="text"
+                placeholder="Аты жонунуз..."
+              />
               <input
                 value={logInfo.email}
                 onChange={(e) =>
@@ -42,7 +51,7 @@ export default function SignUp() {
                   setLogInfo({ ...logInfo, password: e.target.value })
                 }
                 type="password"
-                placeholder="Пароль"
+                placeholder="Пароль..."
                 required
               />
               <button onClick={(e) => handleSubmit(e)}>Аккаунт ач</button>

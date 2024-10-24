@@ -30,7 +30,7 @@ h2 {
 
 @media screen and (max-width: 400px) {
   .helloPage {
-    padding: 100px 10px;
+    padding: 80px 10px 0;
 
     h2 {
       font-size: 18px;

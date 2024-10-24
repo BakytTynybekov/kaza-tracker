@@ -39,7 +39,7 @@
   justify-content: space-between;
   height: 40px;
   max-width: 300px;
-  margin: auto;
+  margin: 20px auto;
   background-color: white;
   padding: 10px 40px;
   border-radius: 10px;
@@ -151,7 +151,7 @@
   .main-kaza {
     padding: 100px 0;
     h2 {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   .kaza_review {

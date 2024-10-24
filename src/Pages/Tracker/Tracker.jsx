@@ -5,6 +5,7 @@ import { Button, Dialog } from "@mui/material";
 import { Gauge } from "@mui/x-charts";
 
 import "./tracker.css";
+import Loading from "../LoadingPage/LoadingPage";
 
 function Tracker() {
   const namazdar = [
@@ -51,6 +52,7 @@ function Tracker() {
     if (!user) navigate("/");
     if (user) getUserData(user?.uid);
   }, [user]);
+
   useEffect(() => {
     setData(userData);
 
@@ -82,7 +84,7 @@ function Tracker() {
     changeUserData(user.uid, data);
     setOpen(false);
   };
-  return (
+  return userData ? (
     <div className="tracker">
       {userData && (
         <div className="container">
@@ -186,6 +188,8 @@ function Tracker() {
         </div>
       )}
     </div>
+  ) : (
+    <Loading />
   );
 }
 
