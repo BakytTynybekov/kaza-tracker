@@ -29,7 +29,7 @@ export default function SignUp() {
             <h1>Жаны аккаунт ачуу</h1>
             <form action="" className="form">
               <input
-                value={logInfo.email}
+                value={logInfo.name}
                 onChange={(e) =>
                   setLogInfo({ ...logInfo, name: e.target.value })
                 }
