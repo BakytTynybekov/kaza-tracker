@@ -46,7 +46,16 @@ export default function KazaNamazdar() {
   };
 
   const handleSubmit = () => {
-    changeUserData(user.uid, data);
+    let total = 0;
+    for (let namaz in data) {
+      if (data[namaz].all) {
+        total += +data[namaz].all;
+      }
+    }
+    console.log(data, total, "hello");
+    data.all = total;
+    total = 0;
+    changeUserData(user.uid, data, total);
     getUserData(user.uid);
 
     navigate("/tracker");
@@ -82,7 +91,11 @@ export default function KazaNamazdar() {
               onChange={(e) =>
                 setData({
                   ...data,
-                  [namaz]: { ...data[namaz], all: e.target.value },
+                  [namaz]: {
+                    ...data[namaz],
+                    all: e.target.value,
+                  },
+                  all: +data.all - +data[namaz].all + +e.target.value,
                 })
               }
               size="small"

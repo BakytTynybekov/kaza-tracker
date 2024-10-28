@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 export default function KazaAnketa() {
   const [startDate, setStartDate] = useState(dayjs());
   const [value, setValue] = useState(dayjs("12/10/1999"));
-  const [balagat, setBalagat] = useState("");
+  const [balagat, setBalagat] = useState("12");
 
   const { user, addOrder } = useContext(GeneralFirebaseContext);
   const navigate = useNavigate();
@@ -66,7 +66,10 @@ export default function KazaAnketa() {
     );
 
     navigate("/tracker");
-    console.log(diff, user.uid);
+    console.log(diff, startDate, value);
+
+    setStartDate(dayjs());
+    setValue(dayjs("12/10/1999"));
   };
 
   useEffect(() => {
